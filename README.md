@@ -30,7 +30,7 @@ Yuxi Zhang,
 [Jiazheng Wang](https://scholar.google.com/scholar?q=Jiazheng+Wang+Hunan+University+medical+image+registration),
 [Xiang Chen](https://xiangchen1994.github.io/),
 [Renjiu Hu](https://scholar.google.com/citations?user=LH7Ru_IAAAAJ&hl=en),
-Xin Tian,
+[Xin Tian](https://scholar.google.com/citations?hl=en&user=hqGvJY0AAAAJ),
 [Gaolei Li](https://scholar.google.com/citations?user=Y9vPI2MAAAAJ&hl=en), and
 [Min Liu](https://scholar.google.com/citations?hl=en&oi=sra&user=njVL32IAAAAJ).
 
