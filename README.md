@@ -14,6 +14,12 @@
   <img alt="Training free" src="https://img.shields.io/badge/training-free-24a148">
 </p>
 
+<p align="center">
+  <a href="https://help.openai.com/en/articles/11096431-openai-codex-cli-getting-started"><img alt="OpenAI Codex friendly" src="https://img.shields.io/badge/OpenAI%20Codex-friendly-111111?logo=openai&logoColor=white"></a>
+  <a href="https://docs.anthropic.com/en/docs/claude-code/overview"><img alt="Claude Code friendly" src="https://img.shields.io/badge/Claude%20Code-friendly-d97757?logo=anthropic&logoColor=white"></a>
+  <a href="INSTALL.md"><img alt="Agent install guide" src="https://img.shields.io/badge/agent%20runbook-INSTALL.md-6f42c1"></a>
+</p>
+
 Official implementation of
 [**VoxelOpt: Voxel-Adaptive Message Passing for Discrete Optimization in
 Deformable Abdominal CT Registration**](https://link.springer.com/chapter/10.1007/978-3-032-04965-0_63),
@@ -33,6 +39,20 @@ foundation-model features, local 3D cost volumes, voxel-wise displacement
 entropy, and adaptive message passing. It delivers competitive abdominal CT
 registration accuracy without training a registration network on segmentation
 labels.
+
+## 🤖 Codex / Claude Code Friendly
+
+This repository is intentionally small, script-first, and terminal-agent
+friendly for [OpenAI Codex](https://help.openai.com/en/articles/11096431-openai-codex-cli-getting-started)
+and [Anthropic Claude Code](https://docs.anthropic.com/en/docs/claude-code/overview).
+The main workflow has two entrypoints, `src/get_unet_features.py` and
+`src/test_abdomen.py`, with a conservative `.gitignore` that keeps datasets,
+feature maps, and logs out of commits.
+
+If you are using Codex or Claude Code, start with the agent runbook:
+[INSTALL.md](INSTALL.md). It tells the agent exactly how to set up the
+environment, where to place `abdomenreg/`, which commands to run, and what files
+must not be committed.
 
 ## 🔥 Why VoxelOpt
 
@@ -246,4 +266,6 @@ Relevant links:
 [Springer paper](https://link.springer.com/chapter/10.1007/978-3-032-04965-0_63),
 [DOI](https://doi.org/10.1007/978-3-032-04965-0_63),
 [Learn2Reg](https://learn2reg.grand-challenge.org/Datasets/),
-[VoxelOpt GitHub](https://github.com/tinymilky/VoxelOpt).
+[VoxelOpt GitHub](https://github.com/tinymilky/VoxelOpt),
+[OpenAI Codex](https://help.openai.com/en/articles/11096431-openai-codex-cli-getting-started),
+[Claude Code](https://docs.anthropic.com/en/docs/claude-code/overview).
