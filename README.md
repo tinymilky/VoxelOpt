@@ -26,13 +26,13 @@ Deformable Abdominal CT Registration**](https://link.springer.com/chapter/10.100
 [MICCAI'2025](https://link.springer.com/book/10.1007/978-3-032-04965-0).
 
 [Hang Zhang](https://tinymilky.github.io/) <a href="mailto:hz459@cornell.edu"><img src="https://img.icons8.com/ios-glyphs/30/000000/new-post.png" alt="email" width="16" style="vertical-align:middle"></a>,
-[Yuxi Zhang](https://scholar.google.com/scholar?q=Yuxi+Zhang+Hunan+University+medical+image+registration),
+Yuxi Zhang,
 [Jiazheng Wang](https://scholar.google.com/scholar?q=Jiazheng+Wang+Hunan+University+medical+image+registration),
 [Xiang Chen](https://xiangchen1994.github.io/),
 [Renjiu Hu](https://scholar.google.com/citations?user=LH7Ru_IAAAAJ&hl=en),
-[Xin Tian](https://scholar.google.com/scholar?q=Xin+Tian+Oxford+medical+image+registration),
+Xin Tian,
 [Gaolei Li](https://scholar.google.com/citations?user=Y9vPI2MAAAAJ&hl=en), and
-[Min Liu](https://scholar.google.com/scholar?q=Min+Liu+Hunan+University+medical+image+registration).
+[Min Liu](https://scholar.google.com/citations?hl=en&oi=sra&user=njVL32IAAAAJ).
 
 VoxelOpt is a training-free deformable registration method that combines
 foundation-model features, local 3D cost volumes, voxel-wise displacement
