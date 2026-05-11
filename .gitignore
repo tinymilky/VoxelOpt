@@ -1,0 +1,42 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Environments
+.venv/
+venv/
+env/
+*.egg-info/
+
+# Local data and generated outputs
+abdomenreg/
+abdomenorireg/
+logs_abct/
+outputs/
+runs/
+*.nii
+*.nii.gz
+*.npy
+*.npz
+
+# Paper build/source artifacts kept out of the code release
+paper_src/
+_MICCAI2025_camera__VoxelOpt__Voxel_Adaptive_Message_Passing_for_Discrete_Optimization_in_Deformable_Abdominal_CT_Registration__Copy_.zip
+*.aux
+*.bbl
+*.blg
+*.log
+*.out
+*.synctex.gz
+*.thm
+
+# Local editor/agent files
+.DS_Store
+.idea/
+.vscode/
+.agents/
+.codex/
