@@ -1,18 +1,32 @@
-# VoxelOpt
+# VoxelOpt: Training-Free Abdominal CT Registration
+
+### [MICCAI'2025](https://link.springer.com/chapter/10.1007/978-3-032-04965-0_63) | [Paper](https://doi.org/10.1007/978-3-032-04965-0_63) | [Code](https://github.com/tinymilky/VoxelOpt) | [Data](https://www.dropbox.com/scl/fo/1ri37zp2awc1e218p0zjx/AHw9tXM-wowNqT8WzG6Uq5c?rlkey=ppgyoll7vzzg6hgdz8uzt9h7q&st=drein7eg&dl=0)
 
 <p align="center">
   <img src="figs/voxelopt_framework.png" width="95%" alt="VoxelOpt framework">
 </p>
 
 <p align="center">
-  <a href="https://papers.miccai.org/miccai-2025/1010-Paper3887.html"><img alt="MICCAI 2025" src="https://img.shields.io/badge/MICCAI-2025-2f6fbb"></a>
+  <a href="https://link.springer.com/chapter/10.1007/978-3-032-04965-0_63"><img alt="MICCAI 2025" src="https://img.shields.io/badge/MICCAI'2025-Springer-2f6fbb"></a>
   <a href="https://github.com/tinymilky/VoxelOpt"><img alt="GitHub" src="https://img.shields.io/badge/code-PyTorch-ee4c2c"></a>
+  <a href="https://doi.org/10.1007/978-3-032-04965-0_63"><img alt="DOI" src="https://img.shields.io/badge/DOI-10.1007%2F978--3--032--04965--0__63-blue"></a>
   <img alt="Task" src="https://img.shields.io/badge/task-deformable%20registration-5b8def">
   <img alt="Training free" src="https://img.shields.io/badge/training-free-24a148">
 </p>
 
-Official implementation of **VoxelOpt: Voxel-Adaptive Message Passing for
-Discrete Optimization in Deformable Abdominal CT Registration**.
+Official implementation of
+[**VoxelOpt: Voxel-Adaptive Message Passing for Discrete Optimization in
+Deformable Abdominal CT Registration**](https://link.springer.com/chapter/10.1007/978-3-032-04965-0_63),
+[MICCAI'2025](https://link.springer.com/book/10.1007/978-3-032-04965-0).
+
+[Hang Zhang](https://tinymilky.github.io/) <a href="mailto:hz459@cornell.edu"><img src="https://img.icons8.com/ios-glyphs/30/000000/new-post.png" alt="email" width="16" style="vertical-align:middle"></a>,
+[Yuxi Zhang](https://scholar.google.com/scholar?q=Yuxi+Zhang+Hunan+University+medical+image+registration),
+[Jiazheng Wang](https://scholar.google.com/scholar?q=Jiazheng+Wang+Hunan+University+medical+image+registration),
+[Xiang Chen](https://xiangchen1994.github.io/),
+[Renjiu Hu](https://scholar.google.com/citations?user=LH7Ru_IAAAAJ&hl=en),
+[Xin Tian](https://scholar.google.com/scholar?q=Xin+Tian+Oxford+medical+image+registration),
+[Gaolei Li](https://scholar.google.com/citations?user=Y9vPI2MAAAAJ&hl=en), and
+[Min Liu](https://scholar.google.com/scholar?q=Min+Liu+Hunan+University+medical+image+registration).
 
 VoxelOpt is a training-free deformable registration method that combines
 foundation-model features, local 3D cost volumes, voxel-wise displacement
@@ -20,24 +34,25 @@ entropy, and adaptive message passing. It delivers competitive abdominal CT
 registration accuracy without training a registration network on segmentation
 labels.
 
-## Why VoxelOpt
+## 🔥 Why VoxelOpt
 
-- **Training-free registration**: no registration-network training loop, no
+- 🚀 **Training-free registration**: no registration-network training loop, no
   supervision labels during optimization.
-- **Foundation features, discrete optimizer**: pre-softmax segmentation features
+- 🧠 **Foundation features, discrete optimizer**: pre-softmax segmentation features
   make the local displacement search sharply informative.
-- **Voxel-adaptive message passing**: uncertain voxels receive more neighbor
+- 📡 **Voxel-adaptive message passing**: uncertain voxels receive more neighbor
   information, while confident boundary voxels preserve strong local signals.
-- **Fast 5-level pyramid solver**: the Table 1 setting uses `k=1`, 27-neighbor
+- ⚡ **Fast 5-level pyramid solver**: the Table 1 setting uses `k=1`, 27-neighbor
   local search, 6 optimization steps, and 7-step scaling-and-squaring.
 
 <p align="center">
   <img src="figs/entropy_distribution.png" width="90%" alt="Feature entropy comparison">
 </p>
 
-## Main Result
+## 🏆 Main Result
 
-Abdominal CT registration, averaged over the 42 ordered test pairs:
+[Abdominal CT registration](https://learn2reg.grand-challenge.org/Datasets/),
+averaged over the 42 ordered test pairs:
 
 | Method | Dice (%) ↑ | HD95 ↓ | SDLogJ ↓ | Runtime |
 | --- | ---: | ---: | ---: | ---: |
@@ -57,7 +72,7 @@ SDLogJ: 0.218
 Small differences are expected from GPU, PyTorch, and half-precision kernel
 behavior.
 
-## Installation
+## 🛠️ Installation
 
 Create an environment with Python 3.9 or newer:
 
@@ -76,9 +91,10 @@ pip install numpy scipy pandas nibabel
 The code has been verified with PyTorch 2.7 and CUDA GPUs. CPU execution is
 possible for feature extraction but is slow for full 3D volumes.
 
-## Download Data
+## 📦 Download Data
 
-Download the preprocessed abdominal CT registration data from Dropbox:
+Download the preprocessed abdominal CT registration data from
+[Dropbox](https://www.dropbox.com/scl/fo/1ri37zp2awc1e218p0zjx/AHw9tXM-wowNqT8WzG6Uq5c?rlkey=ppgyoll7vzzg6hgdz8uzt9h7q&st=drein7eg&dl=0):
 
 ```text
 https://www.dropbox.com/scl/fo/1ri37zp2awc1e218p0zjx/AHw9tXM-wowNqT8WzG6Uq5c?rlkey=ppgyoll7vzzg6hgdz8uzt9h7q&st=drein7eg&dl=0
@@ -111,7 +127,7 @@ The pretrained feature extractor checkpoint is expected at:
 src/unet.pth
 ```
 
-## Quick Start
+## 🚀 Quick Start
 
 Run all commands from the repository root.
 
@@ -154,7 +170,7 @@ python src/test_abdomen.py --data_path ./abdomenreg --gpu_id 0 --max_pairs 1
 This writes `logs_abct/results_ks1_half1_ada1_foundation_n1.csv` and does not
 overwrite the full evaluation CSV.
 
-## Useful Options
+## ⚙️ Useful Options
 
 Feature extraction:
 
@@ -184,7 +200,7 @@ python src/test_abdomen.py --gpu_id 0 is_adaptive=0
 python src/test_abdomen.py --gpu_id 0 ks=2
 ```
 
-## Repository Layout
+## 📁 Repository Layout
 
 ```text
 src/
@@ -201,20 +217,33 @@ figs/
   entropy_distribution.png
 ```
 
-## Citation
+## 📚 Citation
 
 If this repository helps your research, please cite:
 
 ```bibtex
-@inproceedings{zhang2025voxelopt,
-  title={VoxelOpt: Voxel-Adaptive Message Passing for Discrete Optimization in Deformable Abdominal CT Registration},
-  author={Zhang, Hang and Zhang, Yuxi and Wang, Jiazheng and Chen, Xiang and Hu, Renjiu and Tian, Xin and Li, Gaolei and Liu, Min},
-  booktitle={International Conference on Medical Image Computing and Computer-Assisted Intervention},
-  year={2025}
+@InProceedings{ZhaHan_VoxelOpt_MICCAI2025,
+  author    = {Zhang, Hang and Zhang, Yuxi and Wang, Jiazheng and Chen, Xiang and Hu, Renjiu and Tian, Xin and Li, Gaolei and Liu, Min},
+  title     = {VoxelOpt: Voxel-Adaptive Message Passing for Discrete Optimization in Deformable Abdominal CT Registration},
+  booktitle = {Medical Image Computing and Computer Assisted Intervention -- MICCAI 2025},
+  year      = {2025},
+  publisher = {Springer Nature Switzerland},
+  volume    = {LNCS 15963},
+  pages     = {672--683}
 }
 ```
 
-## Keywords
+## 🔎 Keywords
 
-Deformable image registration, abdominal CT, discrete optimization, cost volume,
-foundation model features, adaptive message passing, diffeomorphic registration.
+**VoxelOpt**, **MICCAI 2025**, **deformable image registration**, **medical image
+registration**, **abdominal CT registration**, **3D CT registration**,
+**discrete optimization**, **cost volume**, **voxel-adaptive message passing**,
+**mean-field inference**, **foundation model features**, **foundation
+segmentation model**, **diffeomorphic registration**, **scaling and squaring**,
+**Learn2Reg abdominal CT**, **PyTorch medical imaging**.
+
+Relevant links:
+[Springer paper](https://link.springer.com/chapter/10.1007/978-3-032-04965-0_63),
+[DOI](https://doi.org/10.1007/978-3-032-04965-0_63),
+[Learn2Reg](https://learn2reg.grand-challenge.org/Datasets/),
+[VoxelOpt GitHub](https://github.com/tinymilky/VoxelOpt).
